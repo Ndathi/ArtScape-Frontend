@@ -47,13 +47,13 @@ class App extends React.Component {
         <Header />
 
         <Routes>
-          <Route path="/discover" element={<DiscoverPage />} />
+          <Route path="/discover/*" element={<DiscoverPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route
             path="/sign"
             element={
               this.props.currentUser ? (
-                <Navigate to="/discover" replace={true} />
+                <Navigate to="/discover/*" replace={true} />
               ) : (
                 <SignInAndSignUpPage />
               )
