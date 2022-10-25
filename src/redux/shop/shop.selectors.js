@@ -21,3 +21,12 @@ export const selectCollection = (collectionUrlParam) =>
       (collection) => collection.id === COLLECTION_ID_MAP[collectionUrlParam]
     )
   );
+
+export const selectItem = (collectionUrlParam, itemUrlParam) =>
+  createSelector(
+    [selectCollections],
+    (collections) =>
+      collections.find(
+        (collection) => collection.id === COLLECTION_ID_MAP[collectionUrlParam]
+      ).items[0]
+  );

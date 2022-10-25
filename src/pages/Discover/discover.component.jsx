@@ -4,7 +4,7 @@ import { Route, Routes, useParams } from "react-router-dom";
 
 import CollectionsOverview from "../../components/collections-overview/collections-overview.component";
 
-import CollectionPage from "../collection/collection.component";
+import CollectionRoute from "../collectionRoute/collectionRoute.component";
 
 const DiscoverPage = () => {
   const collectionID = useParams();
@@ -16,7 +16,7 @@ const DiscoverPage = () => {
     <div>
       <Routes>
         <Route exact path="/" element={<CollectionsOverview />} />
-        <Route path=":collectionID" element={<CollectionPage />} />
+        <Route path=":collectionID/*" element={<CollectionRoute />} />
       </Routes>
     </div>
   );

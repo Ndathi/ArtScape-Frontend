@@ -53,7 +53,7 @@ class App extends React.Component {
             path="/sign"
             element={
               this.props.currentUser ? (
-                <Navigate to="/discover/*" replace={true} />
+                <Navigate to="/discover" replace={true} />
               ) : (
                 <SignInAndSignUpPage />
               )
