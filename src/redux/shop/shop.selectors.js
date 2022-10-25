@@ -3,9 +3,9 @@ import { createSelector } from "reselect";
 const COLLECTION_ID_MAP = {
   paintings: 1,
   drawings: 2,
-  jackets: 3,
-  womens: 4,
-  mens: 5,
+  crayons: 3,
+  prints: 4,
+  sketches: 5,
 };
 
 const selectShop = (state) => state.shop;

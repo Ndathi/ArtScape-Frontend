@@ -203,7 +203,7 @@ const SHOP_DATA = [
   },
   {
     id: 5,
-    title: "Hyperrealism",
+    title: "Sketches",
     routeName: "mens",
     items: [
       {
