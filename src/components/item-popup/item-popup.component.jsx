@@ -7,27 +7,27 @@ import CustomButton from "../custom-button/custom-button.component";
 
 import "./item-popup.css";
 
-import img from "./biggie.jpeg";
 import { selectItem } from "../../redux/shop/shop.selectors";
 
 const ItemPopup = ({ item }) => {
-  console.log(item);
+  const obj = useParams();
+  console.log(obj);
 
   const { name, price, imageUrl } = item;
   return (
-    <div className="item-container">
-      <div className="image-container">
-        <img src={imageUrl} alt="" id="image" />
-        <div className="info-container">
+    <div className="bidhaa-container">
+      <div className="picha-container">
+        <img src={imageUrl} alt="" id="picha" />
+        <div className="maelezo-container">
           <div className="price-dollar">${price}</div>
-          <h2 className="item-title">{name}</h2>
-          <div className="item-description">
-            <p className="item-description">
+          <h2 className="bidhaa-title">{name}</h2>
+          <div className="bidhaa-description">
+            <p className="bidhaa-description">
               This painting is part of the manjano series .It portrays
               traditional african earings from the Ameru tribe in Kenya.
             </p>
           </div>
-          <div className="btn-container">
+          <div className="kidude-container">
             {" "}
             <CustomButton>Add to Cart</CustomButton>
           </div>

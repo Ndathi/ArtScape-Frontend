@@ -1,13 +1,5 @@
 import { createSelector } from "reselect";
 
-const COLLECTION_ID_MAP = {
-  paintings: 1,
-  drawings: 2,
-  crayons: 3,
-  prints: 4,
-  sketches: 5,
-};
-
 const selectShop = (state) => state.shop;
 
 export const selectCollections = createSelector(
@@ -16,17 +8,19 @@ export const selectCollections = createSelector(
 );
 
 export const selectCollection = (collectionUrlParam) =>
-  createSelector([selectCollections], (collections) =>
-    collections.find(
-      (collection) => collection.id === COLLECTION_ID_MAP[collectionUrlParam]
-    )
-  );
-
-export const selectItem = (collectionUrlParam, itemUrlParam) =>
   createSelector(
     [selectCollections],
-    (collections) =>
-      collections.find(
-        (collection) => collection.id === COLLECTION_ID_MAP[collectionUrlParam]
-      ).items[0]
+    (collections) => collections[collectionUrlParam]
+  );
+
+export const selectCollectionForPreview = createSelector(
+  [selectCollections],
+  (collections) => Object.keys(collections).map((key) => collections[key])
+);
+
+export const selectItem = (collectionUrlParam, itemUrlParam) =>
+  createSelector([selectCollections], (collections) =>
+    collections[collectionUrlParam].items.find(
+      (item) => item.id.toString() === itemUrlParam
+    )
   );

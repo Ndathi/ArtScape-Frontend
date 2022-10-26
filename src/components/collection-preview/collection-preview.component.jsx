@@ -6,10 +6,10 @@ import CollectionItem from "../collection-item/collection-item.component";
 import "./collection-preview.styles.scss";
 
 const CollectionPreview = ({ title, items }) => {
-  const link = "/discover/" + title.toLowerCase();
+  const linki = "/discover/" + title.toLowerCase() + "/";
   return (
     <div className="collection-preview">
-      <Link className="link-url" to={link}>
+      <Link className="link-url" to={linki}>
         {" "}
         {title}{" "}
       </Link>
@@ -18,7 +18,9 @@ const CollectionPreview = ({ title, items }) => {
         {items
           .filter((item, idx) => idx < 4)
           .map((item) => (
-            <CollectionItem key={item.id} item={item} />
+            <Link to={linki + item.id}>
+              <CollectionItem key={item.id} item={item} />
+            </Link>
           ))}
       </div>
     </div>

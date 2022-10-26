@@ -1,9 +1,9 @@
-.item-container {
+.bidhaa-container {
   display: flex;
   justify-content: center;
 }
 
-.image-container {
+.picha-container {
   display: flex;
 
   justify-content: center;
@@ -11,12 +11,12 @@
   width: 850px;
   height: 550px;
 }
-#image {
+#picha {
   width: 435px;
   height: 509px;
   margin: 20px;
 }
-.btn-container {
+.kidude-container {
   display: flex;
   justify-content: center;
 }
@@ -29,7 +29,7 @@
   color: aliceblue;
 }
 
-.item-description {
+.bidhaa-description {
   margin-bottom: 60px;
   font-size: 1rem;
   color: rgb(51, 1, 1);
@@ -38,7 +38,7 @@
   margin: 30px;
 }
 
-.item-title {
+.bidhaa-title {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
@@ -50,7 +50,7 @@
   color: rgb(121, 9, 9);
 }
 
-.info-container {
+.maelezo-container {
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 20px;
