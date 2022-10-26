@@ -2,8 +2,6 @@ import React from "react";
 
 import { Link, useParams } from "react-router-dom";
 
-import { useNavigate } from "react-router";
-
 import { connect } from "react-redux";
 
 import CollectionItem from "../../components/collection-item/collection-item.component";
@@ -12,7 +10,6 @@ import { selectCollection } from "../../redux/shop/shop.selectors";
 import "./collection.styles.scss";
 
 const CollectionPage = ({ collection }) => {
-  const navigate = useNavigate();
   const { collectionID } = useParams();
   const { title, items } = collection;
 

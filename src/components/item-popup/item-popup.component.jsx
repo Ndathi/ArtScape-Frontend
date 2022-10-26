@@ -5,11 +5,13 @@ import { useParams } from "react-router-dom";
 
 import CustomButton from "../custom-button/custom-button.component";
 
+import { addItem } from "../../redux/cart/cart.actions";
+
 import "./item-popup.css";
 
 import { selectItem } from "../../redux/shop/shop.selectors";
 
-const ItemPopup = ({ item }) => {
+const ItemPopup = ({ item, addItem }) => {
   const obj = useParams();
   console.log(obj);
 
@@ -28,8 +30,9 @@ const ItemPopup = ({ item }) => {
             </p>
           </div>
           <div className="kidude-container">
-            {" "}
-            <CustomButton>Add to Cart</CustomButton>
+            <CustomButton onClick={() => addItem(item)}>
+              Add to cart
+            </CustomButton>
           </div>
         </div>
       </div>
@@ -37,7 +40,7 @@ const ItemPopup = ({ item }) => {
   );
 };
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { collectionID, itemID } = useParams();
 
@@ -46,4 +49,8 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps)(ItemPopup);
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ItemPopup);
