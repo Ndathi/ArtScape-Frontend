@@ -13,6 +13,7 @@ import { toogleCartHidden } from "../../redux/cart/cart.actions";
 
 import { selectCartItems } from "../../redux/cart/cart.selectors";
 import "./cart-dropdown.styles.scss";
+import { Link } from "react-router-dom";
 
 const CartDropdown = ({ cartItems, dispatch }) => {
   const navigate = useNavigate();
@@ -28,16 +29,17 @@ const CartDropdown = ({ cartItems, dispatch }) => {
           <span className="empty-message"> Your cart is empty</span>
         )}
       </div>
+      <Link to="checkout">
+        <CustomButton
+          onClick={() => {
+            // navigate("/checkout");
 
-      <CustomButton
-        onClick={() => {
-          navigate("/checkout");
-
-          dispatch(toogleCartHidden());
-        }}
-      >
-        CHECKOUT
-      </CustomButton>
+            dispatch(toogleCartHidden());
+          }}
+        >
+          CHECKOUT
+        </CustomButton>
+      </Link>
     </div>
   );
 };
