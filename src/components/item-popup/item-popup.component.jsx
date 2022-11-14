@@ -15,19 +15,16 @@ const ItemPopup = ({ item, addItem }) => {
   const obj = useParams();
   console.log(obj);
 
-  const { name, price, imageUrl } = item;
+  const { name, price, imageUrl, description } = item;
   return (
     <div className="bidhaa-container">
       <div className="picha-container">
         <img src={imageUrl} alt="" id="picha" />
         <div className="maelezo-container">
-          <div className="price-dollar">${price}</div>
+          <div className="price-dollar">KSH {price}</div>
           <h2 className="bidhaa-title">{name}</h2>
           <div className="bidhaa-description">
-            <p className="bidhaa-description">
-              This painting is part of the manjano series .It portrays
-              traditional african earings from the Ameru tribe in Kenya.
-            </p>
+            <p>{description}</p>
           </div>
           <div className="kidude-container">
             <CustomButton onClick={() => addItem(item)}>
