@@ -20,7 +20,7 @@ const StripeCheckoutButton = ({ price }) => {
       image="https://svgshare.com/i/CUz.svg"
       description={`Your total is KSH ${price}`}
       amount={priceForStripe}
-      panelLabel="Pay Now"
+      panelLabel="Pay with Stripe"
       token={onToken}
       stripeKey={publishableKey}
       currency="KES"

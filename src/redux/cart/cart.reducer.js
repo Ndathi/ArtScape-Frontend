@@ -4,6 +4,7 @@ import { addItemToCart, removeItemFromCart } from "./cart.utils";
 
 const INITIAL_STATE = {
   hidden: true,
+  mpesaHidden: true,
   cartItems: [],
 };
 
@@ -13,6 +14,12 @@ const cartReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         hidden: !state.hidden,
+      };
+
+    case CartActionTypes.TOOGLE_MPESA_HIDDEN:
+      return {
+        ...state,
+        mpesaHidden: !state.mpesaHidden,
       };
 
     case CartActionTypes.ADD_ITEM:

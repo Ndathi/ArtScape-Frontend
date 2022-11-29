@@ -4,6 +4,10 @@ export const toogleCartHidden = () => ({
   type: CartActionTypes.TOOGLE_CART_HIDDEN,
 });
 
+export const toogleMpesaHidden = () => ({
+  type: CartActionTypes.TOOGLE_MPESA_HIDDEN,
+});
+
 export const addItem = (item) => ({
   type: CartActionTypes.ADD_ITEM,
   payload: item,

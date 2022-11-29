@@ -7,11 +7,13 @@ import CustomButton from "../custom-button/custom-button.component";
 
 import { addItem } from "../../redux/cart/cart.actions";
 
+import { selectCurrentUser } from "../../redux/User/user.selectors";
+
 import "./item-popup.css";
 
 import { selectItem } from "../../redux/shop/shop.selectors";
 
-const ItemPopup = ({ item, addItem }) => {
+const ItemPopup = ({ item, addItem, currentUser }) => {
   const obj = useParams();
   console.log(obj);
 
@@ -27,7 +29,16 @@ const ItemPopup = ({ item, addItem }) => {
             <p>{description}</p>
           </div>
           <div className="kidude-container">
-            <CustomButton onClick={() => addItem(item)}>
+            <CustomButton
+              onClick={() => {
+                if (currentUser) {
+                  addItem(item);
+                  alert("Item added to cart");
+                } else {
+                  alert("Please log in to add items to your cart");
+                }
+              }}
+            >
               Add to cart
             </CustomButton>
           </div>
@@ -43,6 +54,7 @@ const mapStateToProps = (state) => {
 
   return {
     item: selectItem(collectionID, itemID)(state),
+    currentUser: selectCurrentUser,
   };
 };
 

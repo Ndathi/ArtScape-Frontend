@@ -20,7 +20,7 @@ const SHOP_DATA = {
       },
       {
         id: 3,
-        name: "The Streets",
+        name: "Nairobi Streets",
         imageUrl: "https://i.ibb.co/dp8xNFg/kipchoge-nganya.jpg",
         description:
           "This painting depicts a busy street in Nairobi, it also presents the picture of the great kenyan marathon runner Eliud Kipchoge, as a graphiti on the matatu",
@@ -153,51 +153,86 @@ const SHOP_DATA = {
       },
     ],
   },
-  crayons: {
+  prints: {
     id: 3,
-    title: "Crayons",
+    title: "Prints",
     routeName: "jackets",
     items: [
       {
         id: 18,
-        name: "Black Jean Shearling",
-        imageUrl: "https://i.ibb.co/XzcwL5s/black-shearling.png",
-        description: "",
+        name: "Yellow Crane",
+        imageUrl: "https://i.ibb.co/nszw6kt/yellow-Crane.jpg",
+        description:
+          "Capture in the mountains of Germany a print of a beautiful crane I came across",
         price: 125,
       },
       {
         id: 19,
-        name: "Blue Jean Jacket",
-        imageUrl: "https://i.ibb.co/mJS6vz0/blue-jean-jacket.png",
-        description: "",
+        name: "In My Silence",
+        imageUrl: "https://i.ibb.co/tMSdSsM/in-My-Silence.jpg",
+        description:
+          "Prints of the sold out In My Silence drawing. It shows mind growth in silence",
         price: 90,
       },
       {
         id: 20,
-        name: "Grey Jean Jacket",
-        imageUrl: "https://i.ibb.co/N71k1ML/grey-jean-jacket.png",
-        description: "",
+        name: "Yellow Lorry",
+        imageUrl: "https://i.ibb.co/d4vQhFY/yellow-Lorry.jpg",
+        description:
+          "A common scene on kenyan roads, these lorries show resilience and their relevance through time",
         price: 90,
       },
       {
         id: 21,
-        name: "Brown Shearling",
-        imageUrl: "https://i.ibb.co/s96FpdP/brown-shearling.png",
-        description: "",
+        name: "Broken Torso",
+        imageUrl: "https://i.ibb.co/L8DMFFj/manTorso.jpg",
+        description:
+          "A interesting, creative look at man's body and it sculpting",
         price: 165,
       },
       {
         id: 22,
-        name: "Tan Trench",
-        imageUrl: "https://i.ibb.co/M6hHc3F/brown-trench.png",
-        description: "",
+        name: "Illama",
+        imageUrl: "https://i.ibb.co/HxYtqNN/illama.jpg",
+        description:
+          "Spoted in the highlands of Mexico, this print shows the curiousity of these beasts",
+        price: 185,
+      },
+      {
+        id: 220,
+        name: "Elephant",
+        imageUrl: "https://i.ibb.co/PmRsWJd/elephant.jpg",
+        description:
+          "This print shows an abstraction of the elephant, did you know they can be right or left tusked",
+        price: 185,
+      },
+      {
+        id: 221,
+        name: "80s Benz",
+        imageUrl: "https://i.ibb.co/F0XV80M/old-Skul-Benz.jpg",
+        description: "This print was shown as part of the car print collection",
+        price: 185,
+      },
+      {
+        id: 222,
+        name: "Pick up",
+        imageUrl: "https://i.ibb.co/9VSK6Rf/pickup.jpg",
+        description:
+          "Common among the older generation these spotted every home town in early 2000",
+        price: 185,
+      },
+      {
+        id: 223,
+        name: "Black Benz",
+        imageUrl: "https://i.ibb.co/WgFPKF7/black-Benz.jpg",
+        description: "A print of the black benz study by Mercy Kagia",
         price: 185,
       },
     ],
   },
-  prints: {
+  crayons: {
     id: 4,
-    title: "Prints",
+    title: "Fabrics",
     routeName: "womens",
     items: [
       {
