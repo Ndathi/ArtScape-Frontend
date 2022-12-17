@@ -34,6 +34,7 @@ const ProfilePage = ({ collection }) => {
   });
   return (
     <div className="collection-page">
+      <div></div>
       <h2 className="title">My Projects</h2>
       <button className="additionbtn" onClick={() => setShow(!show)}>
         ADD ART

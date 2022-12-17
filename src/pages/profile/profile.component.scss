@@ -9,8 +9,13 @@
   }
 
   .additionbtn {
-    display: flex;
-    justify-content: flex-end;
+    // display: flex;
+    // justify-content: flex-end;
+
+    position: absolute;
+
+    left: 90%;
+    top: 140px;
     width: 80px;
   }
 

@@ -8,14 +8,16 @@ const SHOP_DATA = {
         id: 2,
         name: "Mandizi",
         imageUrl: "https://i.ibb.co/JcwYyq1/banana.jpg",
-        description: "",
+        description:
+          "Banana painting by Ian Ndathi was done as part of a fruit series.",
         price: 18,
       },
       {
         id: 9,
         name: "Two sparrows",
         imageUrl: "https://i.ibb.co/vC9TWKd/two-sparrows.jpg",
-        description: "",
+        description:
+          "Two sparrows painting shows co-existence in the wild it's done in acrylic paints",
         price: 16,
       },
       {
@@ -55,7 +57,8 @@ const SHOP_DATA = {
         id: 7,
         name: "Kamukunji",
         imageUrl: "https://i.ibb.co/jL6WhS7/kamukunji.jpg",
-        description: "",
+        description:
+          "Kamukunji painting is a depiction of communal meetings held in the traditional kenyan community",
         price: 18,
       },
       {
@@ -70,7 +73,8 @@ const SHOP_DATA = {
         id: 8,
         name: "Forest Road",
         imageUrl: "https://i.ibb.co/31n1g2T/abstract-forest-road.jpg",
-        description: "",
+        description:
+          "This shows an abstract painting of a simple road in the middle of the forest ",
         price: 14,
       },
 

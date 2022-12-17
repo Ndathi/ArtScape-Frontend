@@ -3,6 +3,7 @@ import React from "react";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
+import axios from "axios";
 import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
 import "./sign-in.styles.scss";
@@ -24,6 +25,15 @@ class SignIn extends React.Component {
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
+
+      await axios({
+        url: "http://127.0.0.1:8000/api/users/login",
+        method: "post",
+        data: {
+          email: email,
+          password: password,
+        },
+      });
       this.setState({ email: "", password: "" });
     } catch (error) {
       console.log(error);

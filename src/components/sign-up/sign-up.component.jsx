@@ -1,5 +1,5 @@
 import React from "react";
-
+import axios from "axios";
 import FormInput from "../form-input/form-input.component";
 
 import CustomButton from "../custom-button/custom-button.component";
@@ -24,6 +24,23 @@ class SignUp extends React.Component {
 
     const { displayName, email, password, confirmPassword } = this.state;
 
+    if (/[@]/.test(email)) {
+      console.log("awouh");
+      alert("Please enter a valid email address");
+      return;
+    } else {
+    }
+
+    if (!/[.]/.test(email)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
+    if (/\d/.test(displayName)) {
+      alert("Display name should not contain letters");
+      return;
+    }
+
     if (password !== confirmPassword) {
       alert("Passwords do not match");
       return;
@@ -37,6 +54,18 @@ class SignUp extends React.Component {
 
       await createUserProfileDocument(user, { displayName });
 
+      await axios({
+        url: "http://127.0.0.1:8000/api/users/signup",
+        method: "post",
+        data: {
+          name: displayName,
+          email: email,
+          password: password,
+          passwordConfirm: confirmPassword,
+        },
+      });
+
+      alert("Your account is ready");
       this.setState({
         displayName: "",
         email: "",

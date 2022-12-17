@@ -24,6 +24,7 @@ import { useEffect } from "react";
 const CheckoutPage = ({ cartItems, total }) => {
   const [show, setShow] = useState(false);
 
+  console.log(cartItems);
   const mpepeRef = useRef();
 
   useEffect(() => {
@@ -61,19 +62,16 @@ const CheckoutPage = ({ cartItems, total }) => {
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
-
       <div className="total">
         <span>TOTAL: KSH {total}</span>
       </div>
       <div ref={mpepeRef}>{show ? <MpesaPopup /> : null}</div>
-
       <div className="test-warning">
         *Please use the following credit card number for testing *
         <br />
         4242 4242 4242 4242 -Exp: 11/22 cvv: 123
       </div>
       <StripeCheckoutButton price={total} />
-
       <CustomButton onClick={() => setShow(!show)}>Lipa na mpesa</CustomButton>
     </div>
   );

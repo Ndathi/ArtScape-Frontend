@@ -15,7 +15,7 @@ import { selectItem } from "../../redux/shop/shop.selectors";
 
 const ItemPopup = ({ item, addItem, currentUser }) => {
   const obj = useParams();
-  console.log(obj);
+  console.log(currentUser);
 
   const { name, price, imageUrl, description } = item;
   return (

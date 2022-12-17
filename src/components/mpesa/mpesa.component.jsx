@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 import CustomButton from "../custom-button/custom-button.component";
 import FormInput from "../form-input/form-input.component";
@@ -19,7 +20,19 @@ class MpesaPopup extends React.Component {
     const { phone } = this.state;
 
     try {
-      //   await auth.signInWithEmailAndPassword(email, password);
+      await axios({
+        url: "http://127.0.0.1:8000/api/stk",
+        method: "post",
+        data: {
+          phone: phone,
+        },
+      })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((err) => {
+          console.log("there was a payment error");
+        });
       this.setState({ phone: "" });
     } catch (error) {
       console.log(error);

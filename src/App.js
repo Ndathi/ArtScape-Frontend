@@ -18,6 +18,7 @@ import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/User/user.actions";
 
 import { selectCurrentUser } from "./redux/User/user.selectors";
+import OrdersPage from "./pages/orders/ordersPage.component";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -53,11 +54,22 @@ class App extends React.Component {
           <Route path="/discover/*" element={<DiscoverPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/orders" element={<OrdersPage />} />
           <Route
             path="/sign"
             element={
+              // this.props.currentUser ? (
+              //   <Navigate to="/discover" replace={true} />
+              // ) : (
+              //   <SignInAndSignUpPage />
+              // )
+
               this.props.currentUser ? (
-                <Navigate to="/discover" replace={true} />
+                this.props.currentUser.email === "administrator@gmail.com" ? (
+                  <Navigate to="/orders" replace={true} />
+                ) : (
+                  <Navigate to="/discover" replace={true} />
+                )
               ) : (
                 <SignInAndSignUpPage />
               )
