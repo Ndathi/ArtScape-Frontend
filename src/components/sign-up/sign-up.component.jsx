@@ -24,25 +24,50 @@ class SignUp extends React.Component {
 
     const { displayName, email, password, confirmPassword } = this.state;
 
-    if (/[@]/.test(email)) {
-      console.log("awouh");
-      alert("Please enter a valid email address");
-      return;
-    } else {
-    }
+    // if (email) {
+    //   let res = false;
+    //   for (var i = 0; i < email.length; i++) {
+    //     if (email[i] === "@") {
+    //       res = true;
+    //     }
+    //   }
+    //   if (res === false) {
+    //     alert("enter a valid email address");
+    //   }
+    //   return;
+    // } else {
+    //   alert("Please enter an email address");
+    // }
 
-    if (!/[.]/.test(email)) {
-      alert("Please enter a valid email address");
-      return;
-    }
+    // // if (!/[.]/.test(email)) {
+    // //   alert("Please enter a valid email address");
+    // //   return;
+    // // }
+
+    // if (/\d/.test(displayName)) {
+    //   alert("Display name should not contain letters");
+    //   return;
+    // }
+
+    // var check = /^[^@]+$/.test(email);
+
+    // console.log(check);
 
     if (/\d/.test(displayName)) {
       alert("Display name should not contain letters");
       return;
     }
-
+    // if (check) {
+    //   console.log("we are getting here");
+    //   alert("Please enter a valid email address");
+    //   return;
+    // }
     if (password !== confirmPassword) {
       alert("Passwords do not match");
+      return;
+    }
+    if (password.length < 6) {
+      alert("Password must be longer than six characters");
       return;
     }
 

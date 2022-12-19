@@ -19,6 +19,7 @@ import { setCurrentUser } from "./redux/User/user.actions";
 
 import { selectCurrentUser } from "./redux/User/user.selectors";
 import OrdersPage from "./pages/orders/ordersPage.component";
+import UsersPage from "./pages/usersPage/usersPage.component.jsx";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -55,6 +56,7 @@ class App extends React.Component {
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/orders" element={<OrdersPage />} />
+          <Route path="/users" element={<UsersPage />} />
           <Route
             path="/sign"
             element={

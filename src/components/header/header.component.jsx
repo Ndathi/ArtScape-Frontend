@@ -54,7 +54,7 @@ const Header = ({ currentUser, hidden }) => {
               PROFILE
             </Link>
           ) : (
-            <Link className="option" to="/orders">
+            <Link className="option" to="/users">
               USERS
             </Link>
           )
